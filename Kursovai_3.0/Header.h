@@ -192,7 +192,8 @@ public:
     int get_cash();
     void set_cash(int cash);
     int get_profit();
-    void set_profit(int profit, Client* mas, int money, float rate);
+    void bonus(int p, int &money);
+    void set_profit(int profit, Client* mas, int money, float rate);  
 };
 
 

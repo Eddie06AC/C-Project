@@ -88,7 +88,7 @@ void Publisher::get_status()
 	{
 		counting = i;
 	}
-	cout << "Kolicestvo podpischikov " << counting + 1 << endl;
+	cout << "Count of subscribers " << counting + 1 << endl;
 }
 
 Client::Client(int sum_items, Payment* payment_method) : bonus_card(0)
@@ -226,9 +226,8 @@ void Ñash_register_Bonus_card::set_cash(int cash) { decorated_cash_register->set
 
 int Ñash_register_Bonus_card::get_profit() { return decorated_cash_register->get_profit(); }
 
-void Ñash_register_Bonus_card::set_profit(int profit, Client* mas, int money, float rate)
+void Ñash_register_Bonus_card::bonus(int p, int &money) 
 {
-	int p = mas->get_bonus_card();
 	if (p == 1)
 	{
 		int lol = rand() % 2;
@@ -239,6 +238,12 @@ void Ñash_register_Bonus_card::set_profit(int profit, Client* mas, int money, fl
 
 		}
 	}
+}
+
+void Ñash_register_Bonus_card::set_profit(int profit, Client* mas, int money, float rate)
+{
+	int p = mas->get_bonus_card();
+	bonus(p,money);
 	if (rate != 0)
 	{
 		int static counter = 0;
@@ -320,13 +325,11 @@ void ObjectPool::handler(Ñash_register* other, Client** mas, int length, int fla
 			}
 			else
 				card += 1;
-			//profit += mas[flagg[2]]->get_sum_items();
 			int money = mas[flagg[2]]->get_sum_items();
 			other->set_served(served);
 			other->set_cash(cash);
 			other->set_card(card);
 			other->set_profit(profit, mas[flagg[2]], money, rate);
-			//    ÈÑÏÐÀÂÈÒÜ, profit = âñå äåíüãè, à íàäî äåíüãè ñ ÷åëîâåêà
 			count++;
 			if (count >= a)
 			{
@@ -346,7 +349,6 @@ void ObjectPool::handler(Ñash_register* other, Client** mas, int length, int fla
 	if (a > count)
 	{
 		flagg[0] = 0;
-		//Sleep(number * 1000);
 		this->returnÑash_register(other);
 	}
 	else if (k == 1 || a >= count)
@@ -463,7 +465,6 @@ void Handle_clients::do_Business(Client** mas, int length, int flagg[], float ra
 
 void Recalculation::do_Business(Client** mas, int length, int flagg[], float rate)
 {
-	
 		cout << "   Preliminary results of cash register - " << cash->getname() << " requested by the server...." << endl;
 		cout << "   All actions with cash register - " << cash->getname() << " are stopped!" << endl;
 		cash->Get_stats();

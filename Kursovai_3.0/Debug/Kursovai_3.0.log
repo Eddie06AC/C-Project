@@ -1,6 +1,9 @@
-﻿  Source1.cpp
+﻿  Source.cpp
+C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source.cpp(13,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Source1.cpp
 C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(18,15): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(238,13): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(278,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(450): warning C4715: UP_DOWN_price::update: значение возвращается не при всех путях выполнения
+C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(237,13): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
+C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(283,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+  Создание кода...
+C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Source1.cpp(452): warning C4715: UP_DOWN_price::update: значение возвращается не при всех путях выполнения
   Kursovai_3.0.vcxproj -> C:\Хард\Универ\Лабораторные\2021\II семестр\TMPS\Kursovai_3.0\Debug\Kursovai_3.0.exe
